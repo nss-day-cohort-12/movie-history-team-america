@@ -5,7 +5,7 @@
 <div>
   <span ng-if="movie">
     <img ng-src="http://img.omdbapi.com/?i={{movie.imdbID}}&apikey=7c212437">
-  	<div><a href="">Add to watch list</a></div>
+  	<div><a ng-click="add()" href="">Add to watch list</a></div>
   </span>
 </div>
 
