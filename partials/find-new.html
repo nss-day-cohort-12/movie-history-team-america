@@ -3,9 +3,10 @@
 <button ng-click="find()">Find</button>
 
 <div>
-<!-- 	<img src=`http://img.omdbapi.com/?i=${{{movie.imdbID}}}&apikey=7c212437`> -->
-	<!-- {{movie.imdbID}} -->
-<!-- 	<span ng-if="{{movie}}"><img src=`http://img.omdbapi.com/?i=${{{movie.imdbID}}}&apikey=7c212437`></span> -->
+  <span ng-if="movie">
+    <img ng-src="http://img.omdbapi.com/?i={{movie.imdbID}}&apikey=7c212437">
+  	<div><a ng-click="add()" href="">Add to watch list</a></div>
+  </span>
 </div>
 
 
