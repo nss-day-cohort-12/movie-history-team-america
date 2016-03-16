@@ -8,7 +8,7 @@
 <body>
 
   <div ng-app="MovieApp">
-    <div class="container">
+    <div ng-controller="PageCtrl" class="container">
       <div ng-include="'partials/nav.html'"></div>
       <div class="row">
           <div class="col-md-12">
@@ -33,6 +33,8 @@
   <script src="app/controllers/SearchCtrl.js"></script>
   <script src="app/controllers/LoginCtrl.js"></script>
   <script src="app/controllers/UserMovieCtrl.js"></script>
+  <script src="app/controllers/PageCtrl.js"></script>
+  <script src="app/factories/authFactory.js"></script>
   
 </body>
 </html>
