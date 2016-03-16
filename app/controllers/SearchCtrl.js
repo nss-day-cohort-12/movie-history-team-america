@@ -6,6 +6,11 @@ app.controller("SearchCtrl", [
 
   function($scope, FirebaseFactory) {
     $scope.searchUserMovie = "";
+    // $scope.filter = "";
+
+    // $scope.filterUnwatched = function() {
+    //   $scope.filter = "movie.watched"
+    // }
 
     // this function is triggered by search button
     $scope.search = function() {
