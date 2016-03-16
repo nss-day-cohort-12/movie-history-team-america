@@ -7,6 +7,8 @@ app.controller("FindCtrl", [
   function($scope, MovieFactory) {
     $scope.findTitle = "";
     $scope.movie = false;
+    $scope.movieImdbID = "";
+    $scope.posterSrc = "http://img.omdbapi.com/?i=tt0113277&apikey=7c212437";
 
     // this function is triggered by find button
     $scope.find = function() {
@@ -15,7 +17,8 @@ app.controller("FindCtrl", [
     MovieFactory($scope.findTitle).then(
     	movieCollection => {console.log(movieCollection)
     		$scope.movie = movieCollection;
-    		console.log($scope.movie)
+        $scope.posterSrc = `http://img.omdbapi.com/?i=${$scope.movie.imdbID}&apikey=7c212437`;
+        $scope.movieImdbId = $scope.movie.imdbID;
     	},
     	err => console.log(err)
     	);
