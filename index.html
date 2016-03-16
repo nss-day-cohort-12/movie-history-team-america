@@ -3,13 +3,20 @@
   <meta charset="UTF-8">
   <title>Movie History</title>
   <link rel="stylesheet" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <div ng-app="MovieApp">
-    <div ng-controller="PageCtrl">
-      <nav ng-include="'partials/nav.html'"></nav>
-      <div ng-view></div>
+    <div ng-controller="PageCtrl" class="container">
+      <div ng-include="'partials/nav.html'"></div>
+      <div class="row">
+          <div class="col-md-12">
+
+            <div ng-view></div>
+
+          </div>
+      </div>
     </div>
   </div>
 
